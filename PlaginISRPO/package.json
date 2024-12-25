@@ -1,0 +1,34 @@
+{
+    "name": "my-simple-plugin",
+    "displayName": "My Simple Plugin",
+    "description": "A simple VS Code plugin example",
+    "version": "0.0.1",
+    "engines": {
+      "vscode": "^1.80.0"
+    },
+    "categories": [
+      "Other"
+    ],
+    "activationEvents": [
+      "onCommand:MainFile.helloWorld"
+    ],
+    "main": "./MainFile.js",
+    "contributes": {
+      "commands": [
+        {
+          "command": "MainFile.helloWorld",
+          "title": "This is me!"
+        }
+      ]
+    },
+    "scripts": {
+      "vscode:prepublish": "npm run compile",
+      "compile": "echo Compiling...",
+      "lint": "eslint src",
+      "test": "node ./test/runTest.js"
+    },
+    "devDependencies": {
+      "typescript": "^4.0.0"
+    }
+  }
+  
